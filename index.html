@@ -1,53 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Blackburst</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="HTML5 website template">
-  <meta name="keywords" content="global, template, html, sass, jquery">
-  <meta name="author" content="Bucky Maler">
-  <link rel="stylesheet" href="assets/css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackburst</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        /* Navbar Styles */
+        .navbar {
+            width: 100%;
+            height: 42px; /* Binawasan ng 30% mula sa 60px */
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar-content {
+            display: flex;
+            align-items: center;
+            gap: 8px; /* Space sa pagitan ng logo at name */
+        }
+        .logo {
+            height: 28px; /* Binawasan para sumakto sa navbar */
+        }
+        .navbar-title {
+            color: white;
+            font-size: 18px; /* Binawasan ng kaunti para balanced */
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        /* Video Container */
+        .video-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 42px; /* Sumakto sa binawas na navbar height */
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-
-
-<div class="perspective effect-rotate-left" style="background-color: black;">
-  <div class="container"><div class="outer-nav--return"></div>
-    <div id="viewport" class="l-viewport">
-      <div class="l-wrapper">
-        <header class="header">
-          <a class="header--logo" href="#0" style="
-    margin-left: 30px;">
-            <img src="assets/img/web logo aps.png" alt="A Perfect Soul">
-            <p>A Perfect Soul</p>
-          </a>
-          
-        <!--  <button class="header--cta cta">Hire Us</button>
-          <div class="header--nav-toggle">
-            <span></span>
-          </div>-->
-        </header>
-        <div style="padding:56.25% 0 0 0; background-image: none!important;"><iframe src="https://player.vimeo.com/video/1068002550?quality=4k&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="A Perfect Soul"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
- <!--       <nav class="l-side-nav">
-          <ul class="side-nav">
-            <li class="is-active"><span>Home</span></li>
-            <li><span>Works</span></li>
-            <li><span>About</span></li>
-            <li><span>Contact</span></li>
-            <li><span>Hire us</span></li>
-          </ul>
-        </nav>-->
-        
-        
-      </div>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-content">
+            <img src="assets/img/web logo aps.png" alt="Logo" class="logo"> <!-- Updated logo path -->
+            <h1 class="navbar-title">A Perfect Soul</h1>
+        </div>
     </div>
-  </div>
-</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
-<script src="assets/js/functions-min.js"></script>
+    <!-- Video Container -->
+    <div class="video-container">
+        <iframe 
+            src="https://player.vimeo.com/video/1068002550?quality=4k&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" 
+            frameborder="0" 
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            allowfullscreen>
+        </iframe>
+    </div>
 </body>
 </html>
